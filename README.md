@@ -20,8 +20,19 @@ Or without touching the system Ruby, in Docker:
 user never writes into your working tree.
 
 ## Deploy
+
 Push to `main`. `.github/workflows/jekyll.yml` builds with Jekyll 4 and deploys to GitHub Pages.
-In the repo settings set Pages -> Source to **GitHub Actions**. For a custom domain add a `CNAME` file containing the domain and set `url` in `_config.yml`.
+In the repo settings set Pages -> Source to **GitHub Actions** (GitHub's built-in builder is Jekyll 3
+and will fail on this Gemfile).
+
+The site is a project page, so it is served at `https://nailujj.github.io/personal-website/`. The
+workflow passes that base path to the build, which is why `baseurl` stays empty in `_config.yml` and
+local serving stays at `/`. Paths in the templates go through `relative_url`, and the hero resolves
+its data file relative to its own module URL, so both cases work.
+
+To move it to `https://nailujj.github.io/` instead, rename the repo to `Nailujj.github.io`; nothing
+in the config needs to change. For a custom domain later, add a `CNAME` file containing the domain
+and set `url` in `_config.yml`.
 
 ## Layout
 - `index.md` — home page (bio, links, interactive hero, news, research)
