@@ -7,13 +7,13 @@ title: Julian Schmid
 
 # Julian Schmid
 
-I am an MSc student in Machine Learning at [Imperial College London](https://www.imperial.ac.uk/) (Department of Mathematics) and a visiting researcher at [MIT](https://mit.edu/) in the group of Professor [Tess Smidt](https://blondegeek.github.io/), where I work on equivariant graph neural network surrogates for the thermo-mechanical response of ceramic microstructures, funded through the [CHEFSI Center](https://chefsi.mit.edu/).
+I am an MSc student in Machine Learning at [Imperial College London](https://www.imperial.ac.uk/) (Department of Mathematics) and a visiting researcher at [MIT](https://mit.edu/) in the group of Professor [Tess Smidt](https://blondegeek.github.io/), where I work on equivariant graph neural network surrogates for the thermo-mechanical response of ceramic microstructures, funded through the [CHEFSI Center](https://chefsi.mit.edu/), a U.S. Department of Energy predictive science center sponsored by the national nuclear security administration.
 
 I also work full-time as a Data Scientist at [CeramTec](https://www.ceramtec-group.com/en/), where I build deep learning tools for electron-microscopy analysis of ceramic microstructures and statistical methods for understanding materials and experiments.
 
 I am interested in geometric deep learning, equivariant neural networks, and machine learning for physical systems, especially materials and robotics.
 
-[Email](mailto:julian.schmid25@imperial.ac.uk) / [GitHub](https://github.com/YOUR-GITHUB) / [Google Scholar](https://scholar.google.com/citations?user=YOUR-ID) / [LinkedIn](https://linkedin.com/in/julian-schmid03)
+[Email](mailto:julian.schmid25@imperial.ac.uk) / [GitHub](https://github.com/Nailujj) / [Google Scholar](https://scholar.google.com/citations?user=12v_zc0AAAAJ&hl=en) / [LinkedIn](https://linkedin.com/in/julian-schmid03)
 
 <div id="hero" class="hero" aria-label="Interactive visualisation">
   Interactive visualisation (needs JavaScript and WebGL).

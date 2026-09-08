@@ -4,7 +4,7 @@ description: >-
   and MSc student in Machine Learning and Data Science at Imperial College
   London, working on equivariant neural networks and machine learning for
   materials and mechanics.
-url: "https://nailujj.github.io"   # the repo is a project page, so the site lives under /personal-website
+url: "https://nailujj.github.io"   # user domain only; the repo name becomes the path segment
 baseurl: ""   # left empty on purpose: the Actions workflow passes the real base path at build time
 author: Julian Schmid
 lang: en
