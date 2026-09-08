@@ -1,4 +1,4 @@
-# julianschmid.com
+# website
 
 Minimal Jekyll site, same stack as teddykoker.com / ryleymcconkey.com.
 
