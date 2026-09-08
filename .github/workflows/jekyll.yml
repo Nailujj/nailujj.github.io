@@ -31,9 +31,11 @@ jobs:
       - id: pages
         uses: actions/configure-pages@v5
 
-      # base_path is empty with a custom domain and "/<repo>" without one,
-      # so the same workflow serves both cases.
-      - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      # This repo is nailujj.github.io, a user page served at the root, so the build
+      # takes the empty baseurl from _config.yml. Do not pass configure-pages'
+      # base_path here: it reports "/<repo>", and that prefix 404s on a user page.
+      # A project page (any other repo name, no custom domain) would need it back.
+      - run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
 

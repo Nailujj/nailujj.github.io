@@ -25,14 +25,18 @@ Push to `main`. `.github/workflows/jekyll.yml` builds with Jekyll 4 and deploys 
 In the repo settings set Pages -> Source to **GitHub Actions** (GitHub's built-in builder is Jekyll 3
 and will fail on this Gemfile).
 
-This is a project page, so the repository name is the path segment: renaming the repo moves the
-site, and no config change is needed. `actions/configure-pages` reports the base path and the
-workflow passes it to the build, which is why `baseurl` stays empty in `_config.yml` and local
-serving stays at `/`. Paths in the templates go through `relative_url`, and the hero resolves its
-data file relative to its own module URL, so any base path works.
+The repo is named `nailujj.github.io`, which makes it a user page: it is served at the root, with no
+path segment, so `baseurl` stays empty in `_config.yml` and the workflow builds without a
+`--baseurl` flag. Local serving is at `/` too, so the two match. Paths in the templates go through
+`relative_url`, and the hero resolves its data file relative to its own module URL.
 
-Rename the repo to `Nailujj.github.io` to drop the path segment entirely. For a custom domain, add a
-`CNAME` file containing the domain and set `url` in `_config.yml`.
+Do not pass `actions/configure-pages`' `base_path` to the build here. It reports `/<repo>`, which is
+right for a project page but 404s on a user page — every internal link ends up under a path that
+does not exist. If this is ever renamed back to a project page, restore
+`--baseurl "${{ steps.pages.outputs.base_path }}"` in the workflow.
+
+For a custom domain, add a `CNAME` file containing the domain and set `url` in `_config.yml`;
+`baseurl` stays empty.
 
 ## Layout
 - `index.md` — home page (bio, links, interactive hero, news, research)
