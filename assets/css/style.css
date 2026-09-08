@@ -1,0 +1,130 @@
+/* Charter is what the CV is set in; Georgia is a close fallback on systems without it. */
+:root {
+  --text: #000;
+  --muted: #555;
+  --rule: #ccc;
+  --bg: #fff;
+  --measure: 40em;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 106.25%; } /* 17px */
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+main, .site-nav { max-width: var(--measure); margin: 0 auto; }
+
+.site-nav { display: flex; gap: 1.4em; margin-bottom: 2.5rem; }
+.site-nav a { text-decoration: none; color: var(--muted); }
+.site-nav a:hover, .site-nav a:focus { color: var(--text); }
+.site-nav .site-name { color: var(--text); font-weight: bold; }
+
+h1 { font-size: 1.85rem; line-height: 1.15; margin: 0 0 0.6em; }
+h2 { font-size: 1.25rem; margin: 2.2em 0 0.6em; }
+h3 { font-size: 1.05rem; margin: 1.6em 0 0.4em; }
+
+p, ul, ol { margin: 0 0 1em; }
+ul, ol { padding-left: 1.3em; }
+li { margin-bottom: 0.45em; }
+
+a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+a:hover, a:focus { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--text); outline-offset: 2px; }
+
+img, video, svg { max-width: 100%; height: auto; }
+figure { margin: 1.5em 0; }
+figcaption, .post-date, .muted { color: var(--muted); font-size: 0.92rem; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2em 0; }
+
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.35em 0.6em 0.35em 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: bold; }
+
+code, pre { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; }
+pre { padding: 0.9em 1em; overflow-x: auto; background: #f6f6f6; line-height: 1.4; }
+
+/* Publication list: title in italics, own name in bold, venue and links on their own lines */
+.pubs { padding-left: 0; }
+.pubs > li { margin-bottom: 1.1em; list-style: none; }
+.pubs .title { font-style: italic; }
+.pubs .venue, .pubs .links { display: block; }
+
+/* News list: bold date first */
+.news { padding-left: 0; }
+.news > li { list-style: none; }
+.news time { font-weight: bold; }
+
+/* Hero visualisation slot. Fixed aspect ratio so the page does not jump while it loads. */
+.hero {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  margin: 1.5em 0 0.5em;
+  border: 1px dashed var(--rule);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+/* Wider than the text column when there is room for it. Negative margins rather than 100vw, so a
+   scrollbar can never push the page into horizontal overflow. */
+@media (min-width: 52em) {
+  .hero { margin-inline: -3em; }
+}
+.hero--live { border: 1px solid var(--rule); touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.hero-hint {
+  position: absolute; right: 0.6em; bottom: 0.4em;
+  font-size: 0.8rem; color: var(--muted); pointer-events: none;
+  transition: opacity 0.6s;
+}
+.hero-hint--hidden { opacity: 0; }
+.hero-ui { position: absolute; top: 0.5em; left: 0.6em; display: flex; flex-direction: column; gap: 0.3em; align-items: flex-start; }
+.hero-ui__row { display: flex; gap: 0.35em; flex-wrap: wrap; }
+.hero-ui__row[hidden] { display: none; }
+.hero-ui__group { display: inline-flex; gap: 0.35em; }
+.hero-ui__group[hidden] { display: none; }
+.hero-ui button {
+  font: inherit; font-size: 0.8rem; color: var(--muted);
+  background: rgba(255, 255, 255, 0.85); border: 1px solid var(--rule); border-radius: 3px;
+  padding: 0.1em 0.6em; cursor: pointer;
+}
+.hero-ui button:hover, .hero-ui button:focus-visible { color: var(--text); }
+.hero-ui button[aria-pressed="true"] { color: var(--text); border-color: var(--text); }
+.hero-readout {
+  position: absolute; left: 0.6em; bottom: 0.4em;
+  font-size: 0.78rem; line-height: 1.3; color: var(--muted); pointer-events: none;
+  background: rgba(255, 255, 255, 0.85); padding: 0.15em 0.45em; border-radius: 3px; max-width: calc(100% - 1.2em);
+}
+.hero-readout b { color: var(--text); font-weight: normal; font-variant-numeric: tabular-nums; }
+.hero-readout__note { font-size: 0.85em; }
+@media (max-width: 34em) {
+  .hero-hint { display: none; }
+  .hero-readout__note { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* Portrait: floats beside the name and bio on wide screens, stacks above on phones. */
+.portrait {
+  float: right;
+  width: 9.5em;
+  height: 9.5em;
+  object-fit: cover;
+  margin: 0.15em 0 1em 1.6em;
+  border-radius: 3px;
+}
+@media (max-width: 34em) {
+  .portrait { float: none; display: block; width: 7em; height: 7em; margin: 0 0 1.2em; }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  {% if page.math %}
+  <script>window.MathJax = { tex: { inlineMath: [['$','$'], ['\\(','\\)']] } };</script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  {% endif %}
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}" class="site-name">Julian Schmid</a>
+    <a href="{{ '/#research' | relative_url }}">Research</a>
+    <a href="{{ '/writing/' | relative_url }}">Writing</a>
+  </nav>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+title: Julian Schmid
+description: >-
+  Julian Schmid — visiting graduate researcher at MIT (Smidt group, CHEFSI)
+  and MSc student in Machine Learning and Data Science at Imperial College
+  London, working on equivariant neural networks and machine learning for
+  materials and mechanics.
+url: "https://julianschmid.com"   # change if the domain ends up different
+baseurl: ""
+author: Julian Schmid
+lang: en
+logo: /images/prof_pic.jpg        # used by jekyll-seo-tag for link previews
+twitter:
+  card: summary
+
+# Keep Jekyll's build cache out of the working tree.
+cache_dir: /tmp/jekyll-cache
+
+markdown: kramdown
+kramdown:
+  input: GFM
+permalink: /:year/:month/:title/
+timezone: America/New_York
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - deleteme          # local copy of the training data, never published
+  - tools             # scripts that regenerate assets/data/sample.json
+  - docs/README.md    # internal notes, not site content
+  - images/README.md
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
