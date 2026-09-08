@@ -7,9 +7,9 @@ title: Julian Schmid
 
 # Julian Schmid
 
-I am an MSc student in Machine Learning at [Imperial College London](https://www.imperial.ac.uk/) (Department of Mathematics) and a visiting researcher at [MIT](https://mit.edu/) in the group of Professor [Tess Smidt](https://blondegeek.github.io/), where I work on equivariant graph neural network surrogates for the thermo-mechanical response of ceramic microstructures, funded through the [CHEFSI Center](https://chefsi.mit.edu/), a U.S. Department of Energy predictive science center sponsored by the national nuclear security administration.
+I am an MSc student in Machine Learning at [Imperial College London](https://www.imperial.ac.uk/) (Department of Mathematics) and a visiting researcher at [MIT](https://mit.edu/) in the group of Professor [Tess Smidt](https://blondegeek.github.io/), where I work on equivariant graph neural network surrogates for the thermo-mechanical response of ceramic microstructures, funded through the [CHEFSI Center](https://chefsi.mit.edu/), a U.S. Department of Energy predictive science center sponsored by the National Nuclear Security Administration.
 
-I also work full-time as a Data Scientist at [CeramTec](https://www.ceramtec-group.com/en/), where I build deep learning tools for electron-microscopy analysis of ceramic microstructures and statistical methods for understanding materials and experiments.
+  I also work full-time as a Data Scientist at [CeramTec](https://www.ceramtec-group.com/en/), where I build deep learning tools for electron-microscopy analysis of ceramic microstructures and statistical methods for understanding materials and experiments.
 
 I am interested in geometric deep learning, equivariant neural networks, and machine learning for physical systems, especially materials and robotics.
 
@@ -27,7 +27,7 @@ I am interested in geometric deep learning, equivariant neural networks, and mac
 ## News
 
 <ul class="news">
-  <li><time datetime="2026-10">October 2026</time>: Keynote on machine learning in ceramics manufacturing at the annual meeting of the Danish Ceramic Society (DAKS) in Copenhagen.</li>
+  <li><time datetime="2026-10">October 2026</time>: Upcoming keynote on machine learning in ceramics manufacturing at the annual meeting of the Danish Ceramic Society (DAKS) in Copenhagen.</li>
   <li><time datetime="2026-07">July 2026</time>: Started as a visiting graduate researcher at MIT in the Smidt group, working on ML surrogates for heatshield microstructures within CHEFSI.</li>
   <li><time datetime="2026-05">May 2026</time>: Preprint out on interpretable, multi-scale fracture-cause classification in zirconia-toughened alumina (<a href="https://arxiv.org/abs/2605.29798">arXiv</a>).</li>
 </ul>
@@ -35,6 +35,8 @@ I am interested in geometric deep learning, equivariant neural networks, and mac
 ## Research
 
 My current work asks how much an equivariant graph network actually adds over mean-field physics baselines when predicting grain-level energy and dissipation in polycrystals, and how much of a non-equivariant model's error is symmetry noise rather than capacity. At CeramTec I work on segmentation, phase quantification and fracture analysis of SEM micrographs, and on using model uncertainty to decide where and how to image.
+
+### Publications
 
 <ul class="pubs">
   <li>
@@ -65,7 +67,7 @@ My current work asks how much an equivariant graph network actually adds over me
 <ul class="pubs">
   <li>
     <span class="title">Machine Learning in Ceramics Manufacturing</span><br>
-    <span class="venue">Invited keynote, annual meeting of the Danish Ceramic Society (DAKS), Copenhagen, October 2026.</span>
+    <span class="venue">Upcoming keynote, annual meeting of the Danish Ceramic Society (DAKS), Copenhagen, October 2026.</span>
   </li>
   <li>
     <span class="title">Homogenization of Mesoscale Constitutive Response with Equivariant Neural Networks</span><br>
