@@ -7,7 +7,7 @@ title: Julian Schmid
 
 # Julian Schmid
 
-I am an MSc student in Machine Learning at [Imperial College London](https://www.imperial.ac.uk/) (Department of Mathematics) and a visiting researcher at [MIT](https://mit.edu/) in the group of Professor [Tess Smidt](https://blondegeek.github.io/), where I work on equivariant graph neural network surrogates for the thermo-mechanical response of Silicon carbide (SiC) microstructures, funded through [CHEFSI](https://chefsi.mit.edu/), a U.S. Department of Energy predictive science center sponsored by the National Nuclear Security Administration.
+I am an MSc student in Machine Learning at [Imperial College London](https://www.imperial.ac.uk/) (Department of Mathematics) and a visiting researcher at [MIT](https://mit.edu/) in the group of Professor [Tess Smidt](https://blondegeek.github.io/), where I work on equivariant graph neural network surrogates for the thermo-mechanical response of Silicon carbide (SiC) microstructures used in heatshields of hypersonic re-entry vehicles, funded through [CHEFSI](https://chefsi.mit.edu/), a U.S. Department of Energy predictive science center sponsored by the National Nuclear Security Administration.
 
 I also work full-time as a Data Scientist at [CeramTec](https://www.ceramtec-group.com/en/), where I build deep learning tools for electron-microscopy analysis of ceramic microstructures and statistical methods for understanding materials and experiments.
 
